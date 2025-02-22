@@ -41,5 +41,29 @@ namespace laba1
             string answer = temp.Remove(1, 1);
             Console.WriteLine(answer);
         }
+
+        static void Main()
+        {
+            Console.WriteLine("1. Возведение в степень.\n2. Переместить вторую цифру в конец.\n3. Очистить консоль.\n");
+
+            Console.Write("Введите выбранный пункт: ");
+            string UserAnswer = Console.ReadLine();
+
+            switch (UserAnswer)
+            {
+                case "1":
+                    Degree();
+                    break;
+                case "2":
+                    removeAndAdd();
+                    break;
+                case "3":
+                    Console.Clear();
+                    break;
+                default:
+                    Console.WriteLine("\nВыбранного пункта не существует! Повторите попытку!\n");
+                    break;
+            }
+        }
     }
 }
