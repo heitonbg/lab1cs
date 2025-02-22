@@ -23,5 +23,23 @@ namespace laba1
             }
             Console.WriteLine($"Ваш ответ {result}");
         }
+
+        static void removeAndAdd()
+        {
+            Console.Write("Введите число x (x >= 100): ");
+            int x = int.Parse(Console.ReadLine());
+
+            if (x < 100)
+            {
+                Console.WriteLine("Число должно содержать более двух цифр.");
+                return;
+            }
+
+            string temp = Convert.ToString(x);
+            char secondDigit = temp[1];
+            temp = Convert.ToString(x) + secondDigit;
+            string answer = temp.Remove(1, 1);
+            Console.WriteLine(answer);
+        }
     }
 }
